@@ -1,0 +1,318 @@
+/* 声明字体 */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?1x1j55');
+  src:  url('../fonts/icomoon.eot?1x1j55#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?1x1j55') format('truetype'),
+    url('../fonts/icomoon.woff?1x1j55') format('woff'),
+    url('../fonts/icomoon.svg?1x1j55#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.content {
+	height: 480px;
+	position: relative;
+}
+
+/* 中间内容导航栏部分 */
+.content .nav {
+	height: 480px;
+	width: 190px;
+	margin-right: 10px;
+	background-color: #6e6568;
+}
+
+.content .nav ul {
+	/* margin-left: 12px; */
+	margin-top: 18px;
+	font-size: 14px;
+}
+
+.content .nav li {
+	line-height: 28px;
+	padding-left: 12px;
+	box-sizing: border-box;
+	transition: all 1s;
+}
+ 
+.content .nav ul li:hover {
+	background-color: #041e39;
+}
+
+.content .nav a,span {
+	color: #fff;
+	font-size: 14px;
+}
+
+.content .nav a:hover {
+	color: #f10215;
+}
+
+/* 中间内容伸缩广告部分 */
+
+.big-ad .ad-l {
+	position: absolute;
+	top: 0px;
+	right: 1190px;
+}
+
+.big-ad .ad-r {
+	height: 480px;
+	width: 0;
+	background: url(../images/ad-r.jpg) no-repeat;
+	position: absolute;
+	transition: all 1s;
+	z-index: 999;
+}
+
+.big-ad:hover .ad-r {
+	width: 990px;
+}
+
+/* 中间部分广告部分 */
+.content .ad {
+	width: 790px;
+	height: 480px;
+	/* background-color: #000; */
+	margin-right: 10px;
+}
+
+.ad .top {
+	display: block;
+	width: 790px;
+	height: 340px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.ad .bottom-l {
+	display: block;
+	width: 390px;
+	height: 130px;
+	float: left;
+}
+
+.ad .bottom-r {
+	display: block;
+	width: 390px;
+	height: 130px;
+	float: right;
+}
+
+.ad .box {
+	height: 60px;
+	width: 30px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0,0,0,0.2);
+	font-size: 20px;
+	text-align: center;
+	line-height: 60px;
+	color: rgba(255,255,255,0.6);
+	transition: background-color 0.5s;
+
+}
+
+.box:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.ad .box-l {
+	left: 0;
+}
+
+.ad .box-r {
+	right: 0;
+}
+
+.circle {
+	height: 20px;
+	width: 175px;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-left: 8px;
+	/* padding-right: 8px; */
+	box-sizing: border-box;
+}
+
+.circle li {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	background-color: #fff;
+	float: left;
+	margin: 4px 4px;
+	transition: background-color 0.4s;
+	/* margin-top: 4px;
+	margin-right: 10px; */
+	
+}
+
+.circle li:hover {
+	background-color: #f10215;
+	cursor: pointer;
+}
+
+/* .circle li:last-child {
+	margin-right: 0;
+} */
+
+/* 右侧个人登录及活动 */
+
+.content .other {
+	width: 190px;
+	height: 480px;
+	background-color: #fff;
+}
+
+.other .login {
+	height: 115px;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 15px 0px 15px 15px;
+	box-sizing: border-box;
+}
+
+.login .hi {
+	height: 50px; 
+	padding-left: 57px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.hi .image {
+	display: block;
+	height: 50px;
+	width: 50px;
+	/* border-radius: 50%; */
+	background: url(../images/sprite_userinfo@1x.png) no-repeat -70px 0,
+				url(../images/no_login.jpg)  no-repeat center/50px;		
+	position: absolute;
+	left: 0px;
+	/* overflow: hidden; */
+}
+
+.hi p {
+	width: 95px;
+	padding: 6px 0;
+	/* line-height: 6px; */
+	font-size: 12px;
+	color: #666;
+	white-space: nowrap;	/* 添加此属性强制文本一行内显示 */
+	text-overflow: ellipsis;	/* 若改为clip不显示省略标记，直接进行简单裁切，必须要搭配overflow */
+	overflow: hidden;
+}
+
+ .hi a {
+	font-size: 14px;
+}
+
+ .button a {
+ 	display: block;
+	width: 70px;
+	height: 20px;        
+	border: 2px solid #e01222;
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	margin-right: 10px;
+	color: #e01222;
+	transition: all 0.5s;
+}
+ 
+ .button a:hover {
+ 	color: #fff;
+ 	background-color: #e01222;
+ }
+
+
+/* 促销公告栏 */
+.news {
+	height: 154px;
+	border-bottom: 1px solid #ccc;
+	padding: 7px 13px 0;
+	box-sizing: border-box;
+}
+
+.news-t {
+	height: 20px;
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+}
+
+.news-t span {
+	margin: 0 10px;
+	color: #ccc;
+}
+
+.news-t a {
+	display: block;
+	height: 19px;
+}
+.news-t a:hover {
+	border-bottom: 2px solid #e01222;
+}
+
+.news-b ul {
+	margin-top: 13px;
+	font-size: 12px;
+	line-height: 25px;
+}
+
+.expand {
+	overflow: hidden;
+	height: 209px;
+}
+
+.expand ul {
+	width: 192px;
+}
+
+.expand li {
+	width: 47px;
+	height: 69px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	float: left;
+}
+
+.expand li i {
+	font-family: icomoon;
+	font-style: normal;
+	color: #666;
+}
+
+.expand li a {
+	display: block;
+	height: 42px;
+	width: 25px;
+	/* margin: 15px auto 12px; */
+	padding: 15px 11px;
+	padding-bottom: 12px;
+	text-align: center;
+}
+
+.expand li span {
+	display: block;
+	color: #666;
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.expand li a:hover span {
+	color: #e01222;
+}
+
+
+
+
+
+
+
+
