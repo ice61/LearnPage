@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的插槽</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child>
+        <h1 slot="header">header</h1>
+        <div slot="fotter">fotter</div>
+    </child>
+</div>
+
+<script>
+    Vue.component('child',{
+        /*如果没有传相对应的数据，插槽具有默认值*/
+        /*可为slot添加名字变为具名插槽，具名插槽可以有多个*/
+        template:`<div>
+                    <slot name="header"></slot>
+                    <div>content</div>
+                    <slot name="fotter"></slot>
+                    <slot name="else">default value</slot>
+                  </div>`
+    })
+
+    var app = new Vue({
+        el:'#app',
+    })
+</script>
+
+</body>
+</html>

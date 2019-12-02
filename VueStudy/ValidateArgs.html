@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件参数校验与非Props特性</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <child content="bye world"></child>
+</div>
+
+<script>
+
+    Vue.component('child', {
+        props: {
+            content: {
+                type: String,
+                required: false,
+                default: 'Hello world',
+                validator(value) {
+                    return (value.length > 5);
+                }
+            }
+        },
+        template: '<div>{{content}}</div>'
+    })
+
+    var app = new Vue({
+        el: '#app',
+    })
+
+</script>
+</body>
+</html>

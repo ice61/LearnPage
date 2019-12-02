@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ComuptedMethodsAndWatch</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        姓：<input type="text" v-model="lastName">
+        名：<input type="text" v-model="firstName">
+        年龄：<input type="number" v-model="age">
+        <!--<h3>{{fullName}}</h3>-->
+
+        <!--插值表达式中调用methods中的方法必须添加()-->
+        <!--<h3>{{fullName()}}</h3>-->
+
+        <h3>{{fullName}}</h3>
+        <h5>{{age}}</h5>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data: {
+                firstName:'',
+                lastName:'',
+                /*fullName变量仅用于演示watch*/
+                fullName:'',
+                age:'',
+            },
+            /*computed中的方法会运用缓存，仅在调用的数据发生变化时才重新计算 */
+            /*computed: {
+                fullName: function () {
+                    console.log('计算了一次');
+                    return this.lastName + this.firstName;
+                }
+            }*/
+
+            /*不会调用缓存，页面只要刷新，都会重新计算*/
+            /*methods: {
+                fullName: function () {
+                    console.log('计算了一次');
+                    return this.lastName + this.firstName;
+                }
+            }*/
+            watch: {
+                firstName: function() {
+                    console.log('名改变了');
+                    console.log(this.lastName + this.firstName);
+                    this.fullName = this.lastName + this.firstName;
+                },
+
+                lastName: function() {
+                    console.log('姓改变了');
+                    this.fullName = this.lastName + this.firstName;
+                }
+            }
+
+
+        })
+    </script>
+</body>
+</html>

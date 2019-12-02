@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue中的条件渲染</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <button @click="changeShow">切换</button>
+    <br>
+    <h3 v-if="show">{{ifmsg}}</h3>
+    <h3 v-show="show">{{showmsg}}</h3>
+    <br><br>
+    <h3 v-if="show">Hello World</h3>
+    <h3 v-else>Bye World</h3>
+    <br><br>
+    <input type="text" v-model="word">
+    <h4 v-if="word === 'A'">A</h4>
+    <h4 v-else-if="word === 'B'">B</h4>
+    <h4 v-else>others</h4>
+    <br><br>
+    <button @click="name = !name ">切换输入选项</button>
+    <!--添加key之后可防止复用-->
+    <div v-if="name">姓名：<input type="text" key="username"></div>
+    <div v-else>邮箱：<input type="email" key="emial"></div>
+
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            show: true,
+            ifmsg: 'v-if会清除和添加dom元素',
+            showmsg: 'v-show会切换dom元素的display属性',
+            word: '',
+            name: true,
+        },
+        methods: {
+            changeShow() {
+                this.show = !this.show;
+            }
+        }
+    })
+</script>
+</body>
+</html>

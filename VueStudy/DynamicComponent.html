@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态组件和v-once指令</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--component是vue提供的动态显示组件的标签-->
+    <!--<component :is="type"></component>-->
+    <childone v-if="type === 'childone'"></childone>
+    <childtwo v-if="type === 'childtwo'"></childtwo>
+    <button @click="handleBtnClick">change</button>
+</div>
+
+<script>
+
+    /*在组件中添加v-once后，有利于提高静态资源的展示效率*/
+
+    Vue.component('childone', {
+        template: '<div v-once>childone</div>'
+    })
+
+    Vue.component('childtwo', {
+        template: '<div v-once>childtwo</div>'
+    })
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            type: 'childone',
+        },
+        methods: {
+            handleBtnClick() {
+                this.type = this.type === 'childone' ? 'childtwo' : 'childone';
+            }
+        }
+    })
+</script>
+</body>
+</html>

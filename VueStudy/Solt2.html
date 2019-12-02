@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域插槽</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <child>
+        <template slot-scope="props">
+            <h5>{{props.item.name + '-------' + props.item.age}}</h5>
+        </template>
+    </child>
+    <child>
+        <template slot-scope="props">
+            <span v-text="props.item.name"></span>
+        </template>
+    </child>
+</div>
+
+<script>
+    Vue.component('child', {
+        data: function () {
+            return {
+                list: [
+                    {
+                        name:'张三',
+                        age:23
+                    },
+                    {
+                        name:'李四',
+                        age:24
+                    },
+                    {
+                        name:'王五',
+                        age:25
+                    },
+                ],
+            }
+        },
+        template:`<div>
+                    <ul v-for="item in list">
+                        <slot :item = item></slot>
+                    </ul>
+                  </div>`
+    })
+
+    var app = new Vue({
+        el:'#app',
+
+    })
+</script>
+</body>
+</html>

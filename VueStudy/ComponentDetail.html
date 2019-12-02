@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件使用中的细节</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--在h5中，tbody标签中需放置tr标签，如果在这里直接使用组件，会出现bug，因此我们使用is属性-->
+    <table>
+        <tbody>
+        <!--如果一定要对dom进行操作，可为相关dom添加ref属性，用法如下-->
+        <tr is="row" ref="one" @change="handleChange"></tr>
+        <tr is="row" ref="two" @change="handleChange"></tr>
+        <tr><td>{{total}}</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+    Vue.component('row', {
+        template: '<tr @click="handleClick" ><td>{{number}}</td></tr>',
+        /*组件中的data必须以函数方式返回，这样可以确保每个组件的独立性*/
+        data: function () {
+            return {
+                number: 0,
+            }
+        },
+        methods: {
+            handleClick() {
+                this.number++;
+                this.$emit('change');
+            }
+        }
+    })
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            total: 0
+        },
+        methods: {
+            handleChange() {
+                this.total = this.$refs.one.number + this.$refs.two.number;
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
