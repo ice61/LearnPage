@@ -1,0 +1,374 @@
+		body {
+			background-color: #f3f5f7;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		.clearfix:before, .clearfix:after {
+			display: table;
+			content: "";
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.clearfix {
+			*zoom: 1;
+		}
+		
+		input {
+			border: none;
+			outline: medium;
+			box-sizing: border-box;
+		}
+		
+		.container {
+			width: 1200px;
+			margin: 0 auto;
+		}
+
+		/* 页面头部 */
+		header {
+			height: 100px;
+			overflow: hidden;
+		}
+
+		nav {
+			width: 1375px;
+			height: 42px;
+			background-color: #f3f5f7;
+			margin: 30px auto;
+		}
+
+		.logo {
+			float: left;
+		}
+
+		.navbar {
+			float: left;
+			height: 42px;
+			line-height: 42px;
+			margin-left: 50px;
+		}
+
+		.navbar li {
+			float: left;
+			margin-right: 24px;
+		}
+
+		a {
+			color: #050505;
+			text-decoration: none;
+		}
+		
+		.navbar li a {
+			padding: 0 9px;
+			display: block;	
+			height: 42px;
+		}
+
+		.navbar li a:hover {
+			border-bottom: 2px solid #00a4ff;
+		}
+
+		.search {
+			width: 410px;	/* 360+50 */
+			height: 38px;
+			border: 1px solid #00a4ff;
+			float: right;
+		}
+
+		.search input[type=text] {
+			background-color: #f3f5f7;
+			width: 360px;
+			height: 36px;
+			padding-left: 20px;
+			float: left;
+		}
+
+		.search input[type=submit] {
+			width: 50px;
+			height: 38px;
+			/* background-color: #00a4ff; */
+			float: left;
+			background: #00a4ff url(images/search_06.png) center center no-repeat;
+		}
+
+		.banner {
+			height: 420px;
+			background-color: #1c036c;
+
+		}
+
+		.banner-in {
+			height: 420px;
+			background: url(images/banner_03.png) 0 0 no-repeat;
+			position: relative;
+		}
+
+		.circle {
+			width: 180px;
+			height: 22px;
+			/* background-color: orange; */
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			margin-left: -110px;
+		}
+
+		.circle li {
+			width: 12px;
+			height: 12px;
+			border-radius: 10px;
+			background-color: rgba(250,250,250,0.5);
+			float: left;
+			margin: 6px 8px;
+		}
+
+		.circle li:hover {
+			background-color: rgba(250,250,250,0.8);
+			box-shadow: 0px 0px 3px 3px rgba(250,250,250,1);
+		}
+
+		.slidebar {
+			height: 420px;
+			width: 190px;
+			float: left;
+			background-color: rgba(0,0,0,0.5);
+		}
+		
+		.slidebar li a {
+			color: #fff;
+			font-size: 16px;
+			padding: 0 20px;
+			display: block;
+			height: 45px;
+			line-height: 45px;
+		}
+
+		.slidebar li a:hover {
+			color: #00b4ff;
+		}
+
+		.slidebar a span {
+			float: right;
+		}
+
+		.timetable {
+			float: right;
+			height: 300px;
+			width: 230px;
+			margin-top: 50px;
+			background-color: #fff;
+		}
+
+		.timetable dt {
+			background-color: #9bceea;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			color: #fff;
+			font-weight: bold;
+			letter-spacing: 2px;
+			margin-bottom: 6px;
+		}
+
+		.timetable dd {
+			height: 60px;
+			width: 190px;
+			background: #fff;
+			margin: 0 auto;
+			border-bottom: 1px solid #eaeaea;
+			padding-top: 14px;
+			box-sizing: border-box;
+			transition: color 0.5s;
+		}
+
+		.timetable dd:hover {
+			color: #22b0ff;
+			cursor: pointer;
+		}
+
+		.timetable dd h4 {
+			font-weight: normal;
+		}
+
+		.timetable dd p {
+			font-size: 13px;
+		}
+
+		.timetable dd:last-child {
+			border-bottom: none;
+		}
+		
+		.timetable dd a {
+			display: block;
+			height: 40px;
+			width: 200px;
+			box-sizing: border-box;
+			border: 1px solid #22b0ff;
+			text-align: center;
+			line-height: 40px;
+			color: #22b0ff;
+			font-weight: bold;
+			transition-duration: 0.5s;
+		}
+
+		.timetable dd a:hover {
+			color: #fff;
+			background-color: #22b0ff;
+			/* transition-duration: 0.5s; */
+		}
+
+		.recommend {
+			height: 60px;
+			margin-top: 8px;
+			background-color: #fff;
+			box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+			padding-top: 20px;
+			box-sizing: border-box;
+		}
+
+		.recommend a {
+			display: block;
+			line-height: 16px;
+			float: left;
+			/* width: 122px; */
+			height: 16px;
+			/* text-align: center; */
+			padding: 0 35px;
+			border-left: 1px solid #bfbfbf;
+		}
+
+		.recommend a:hover {
+			color: #00a4ff;
+		}
+
+		.recommend a:last-child {
+			float: right;
+			border: none;
+			color: #00a4ff;
+		}
+
+		.recommend a:first-child {
+			border: none;
+			font-weight: bold;
+			color: #00a4ff;
+		}
+
+		.recom-products {
+			margin-top: 35px;
+			/* height: 1500px; */
+		}
+
+		.recom-hd {
+			height: 40px;
+			/* background-color: orange; */
+		}
+
+		.recom-hd h3 {
+			font-weight: normal;
+			font-size: 16px;
+			float: left;
+			color: #494949;
+		}
+
+		.recom-hd a {
+			display: block;
+			float: right;
+			font-size: 13px;
+			color: #bcbcbd;
+			margin-top: 10px;
+		}
+
+		.recom-bd ul li {
+			width: 228px;
+			height: 270px;
+			background: #ffffff;
+			/* overflow: hidden; */
+			box-shadow: 0 1px 1px 0px #c1c3c4;
+			float: left;
+			margin-right: 15px;
+			margin-top: 15px;
+			position: relative;
+		}
+
+		/* .recom-bd li img {
+			position: absolute;
+			top: 24px;
+			left: 228px;
+		} */
+
+		.hot {
+			position: absolute;
+			top: 4px;
+			right: -4px;
+			background: url(images/hot.png) no-repeat left top,
+						url(images/cent.png) no-repeat right bottom;
+			width: 40px;
+			height: 24px;
+			text-align: center;
+			color: #ff592d;
+			font-weight: bold;
+			line-height: 20px;
+			font-size: 10px;
+		}
+
+
+
+		.recom-bd li:nth-child(5n) {
+			margin-right: 0;
+		}
+
+		.recom-bd ul li h5,
+		.recom-bd ul li p {
+			/* padding-left: 24px;
+			padding-right: 20px; */
+			padding: 22px 20px 0 24px;
+		}
+
+		.recom-bd ul li h5 {
+			font-weight: 600;
+		}
+
+		.recom-bd ul li p {
+			font-size: 13px;
+			color: #999999;
+		}
+
+		.recom-bd ul span {
+			color: #ff7c2d;
+		}		
+
+		.recom-bd li:hover {
+			box-shadow: 0 1px 2px 2px #c1c3c4;
+			transition-duration: 0.5s;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+
+		footer {
+			height: 270px;
+			background-color: #fff;
+			margin-top: 100px;
+		}
+
+		.footer-in {
+			padding-top: 30px;
+		}
+
+		.footer-l {
+			float: left;
+		}
+		
+		.footer-r {
+			float: right;
+		}
+
+
