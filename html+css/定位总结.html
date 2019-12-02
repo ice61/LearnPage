@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位总结</title>
+	<style>
+		table {
+			width: 750px;
+			height: 300px;
+			border: 1px solid skyblue;
+			border-collapse: collapse;		/* 合并相邻边框 */
+		}
+
+		td,th {
+			border: 1px solid skyblue;
+			/* text-align: center; */
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption>
+			<p>定位总结</p>
+		</caption>
+		<thead>
+			<tr>
+				<th>定位模式</th>
+				<th>是否脱标占有位置</th>
+				<th>是否可以使用边偏移</th>
+				<th>移动位置基准</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>静态static</td>
+				<td>不脱标，正常模式</td>
+				<td>不可以</td>
+				<td>正常模式</td>
+			</tr>
+			<tr>
+				<td>相对定位relative</td>
+				<td>不脱标，占有位置</td>
+				<td>可以</td>
+				<td>相对自身原位置移动</td>
+			</tr>
+			<tr>
+				<td>绝对定位absolute</td>
+				<td>完全脱标，不占有位置</td>
+				<td>可以</td>
+				<td>相对于定位父级移动位置（子绝父相）</td>
+			</tr>
+			<tr>
+				<td>固定定位fixed</td>
+				<td>完全脱标，不占有位置</td>
+				<td>可以</td>
+				<td>相对于浏览器移动位置</td>
+			</tr>
+	</table>
+		</tbody>
+		
+	<p>z-index数值越大优先级越高（只有非静态定位才有这个属性）</p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>子元素选择器和后代元素选择器</title>
+	<style>
+
+		.item li {
+			color: orange;
+		}
+		/* 后代选择器会将所有后代选中，如上：会选中类为item中的所有li */
+		
+		.item > li {
+			color: green;
+		}
+		/* 子元素选择器只选择亲儿子 */
+		
+		ul li ul li {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="item">
+			<li>一级菜单
+				<ul>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul>
+			</li>
+			<li>一级菜单
+				<ul>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul>
+			</li>
+			<li>一级菜单
+				<ul>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过渡效果</title>
+	<style>
+		.container {
+			background: url(yybimage.jpg) no-repeat;
+			background-size: 600px 600px;
+			width: 600px;
+			height: 600px;
+		}
+		
+		.black {
+			background-color: rgba(0,0,0,0.5);
+			height: 0px;
+			width: 600px;
+			transition: height 0.5s ease-out;
+			position: absolute;
+			/* transition: 过渡属性 花费时间 时间曲线 开始过渡时间 */
+		}
+		
+		.container:hover .black {
+			height: 600px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="black"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒子模型——边框</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: orange;
+			/* border: border-width border-style border-color; */
+		}
+
+		input {
+			border-width: 0;
+		}
+ 
+		.user {
+			border: 2px solid orange;
+		}
+
+		.line {
+			border-bottom: 2px solid skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div>我是一个盒子</div>
+	<br>
+	<br>
+	<br>
+	用户名：<input type="text" class="user" />
+	<br>
+	<br>
+	<br>
+	用户名：<input type="text" class="line" autofocus="autofocus" />
+</body>
+</html>

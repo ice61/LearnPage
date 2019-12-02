@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标样式</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: skyblue;
+			cursor: default;	/* 默认是小白 */
+		}
+
+		.pointer {
+			cursor: pointer;
+			background-color: orange;
+		}
+
+		.move {
+			cursor: move;
+			background-color: gray;
+		}
+
+		.text {
+			cursor: text;
+			background-color: purple;
+		}
+
+		textarea {
+			resize: none;			/* 防止文本域拖拽 */
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div>鼠标经过会变换样式 当前为默认的小白</div>
+	<div class="pointer">鼠标经过我会变成小手</div>
+	<div class="move">鼠标经过我会变成移动样式</div>
+	<div class="text">鼠标经过我会变成文本格式</div>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+</body>
+</html>

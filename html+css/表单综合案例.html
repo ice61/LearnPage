@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生档案</title>
+</head>
+<body>
+	<form action="#">
+		<fieldset>
+			<legend>学生档案</legend>
+		 	<label>姓名：<input type="text" placeholder="请输入学生姓名" autofocus="autofocus" /></label><br><br>
+			<label>手机：<input type="tel" /></label><br><br>
+			<label>邮箱：<input type="email" /></label><br><br>
+			<label>所属学院：<input type="text" list="xueyuan" placeholder="请选择学院"></label><br><br>
+			<datalist id="xueyuan">
+				<option>java学院</option>
+				<option>前端学院</option>
+				<option>php学院</option>
+				<option>设计学院</option>
+			</datalist>
+			出生日期：<input type="date" /><br><br>
+			成绩：<input type="number" /><br><br>
+			<input type="submit" /><br>
+		</fieldset>
+	</form>
+	<p>为了浏览器兼容，我们需要做三种声音文件 ogg mp3 wav</p>
+	<audio  controls="controls" loop="-1" autoplay="autoplay">
+		<source src="musicName.mp3" />
+		<source src="musicName.ogg" />
+		您的浏览器不支持播放声音
+	<!-- loop=-1为无限循环 -->
+	</audio>
+	<p>播放视频（视频支持ogg mp4 webM格式）</p>
+	<video controls="controls" autoplay="autoplay">
+		<source src="videoName.mp4" />
+		<source src="videoName.ogg" />
+		您的浏览器不支持视频播放
+	</video>
+</body>
+</html>

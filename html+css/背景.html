@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景</title>
+	<style>
+		
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.image {
+			width: 900px;
+			height: 900px;
+			background-image: url(yybimage.jpg);
+			background-size: 300px,300px;
+			background-repeat: no-repeat;
+			background-color: skyblue;
+			background-position: right bottom;
+			/* background-position: 10px 30px; */
+		}
+
+		body {
+			height: 1800px;
+			background-image: url(yybimage.jpg);
+			/* background-image: url(zznimage.jpg); */
+			background-repeat: no-repeat;
+			/* background-attachment: fixed;			背景固定 */
+
+			background-size: 600px 600px;
+			/* background-size: contain;					图片进行等比例缩放，保证图片始终完整显示在背景区域
+			background-size: cover;						图片进行等比例缩放，多出的部位会被截掉,使用居多
+			background-size: 50%;						把背景图像缩放为原来的一半 */
+
+			background-attachment: scroll;
+			background-position: top left;
+		}
+
+		.height-600 {
+			height: 500px;
+			width: 600px;
+			background: rgba(0,0,0,0.5);
+		}
+
+		.bgc-orange {
+			background-color: orange;
+			width: 300px;
+			height: 300px;
+		}
+
+		.images {
+			width: 600px;
+			height: 600px;
+			background-size: 450px 450px;
+			background: url(yybimage.jpg) no-repeat left top/300px 300px,
+						url(zznimage.jpg) no-repeat right bottom/300px 300px skyblue;	/* 背景色必须加在最后一组上 */
+
+		}
+	</style>
+</head>
+<body>
+	<div class="height-600"></div>
+	<div style="width: 600px;height: 100px"></div>
+	<div class="bgc-orange"></div>
+	<!-- <div class="image"></div> -->
+	<div class="images"></div>
+</body>
+</html> 

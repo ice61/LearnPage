@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>块行级元素相互转换</title>
+	<style>
+		div {
+			background-color: skyblue;
+			width: 100px;
+			height: 80px;
+			display: inline;		/* 块级标签转行内标签 */
+		}
+
+		span {
+			background-color: gray;
+			width: 100px;
+			height: 80px;
+			display: block;			/* 行内标签转块级标签 */
+		}
+
+		a {
+			background-color: deeppink;
+			width: 100px;
+			height: 80px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div>块级元素1</div>
+	<div>块级元素2</div>
+	<div>块级元素3</div>
+	<br>
+	<br>
+	<br>
+
+	<span>行级元素1</span><br>
+	<span>行级元素2</span><br>
+	<span>行级元素3</span><br>
+
+	<a href="#">123</a>
+	<a href="#">456</a>
+
+</body>
+</html>

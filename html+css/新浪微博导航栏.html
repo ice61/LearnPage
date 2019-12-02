@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪微博导航栏</title>
+	<style>
+		nav {
+			height: 41px;
+			background-color: #fcfcfc;
+			border-top: 3px solid #ff8500;
+			border-bottom: 1px solid #edeef0;
+		}
+
+		nav a {
+			font-size: 14px;
+			color: #4c4c4c;
+			text-decoration: none;
+			display: inline-block;
+			/* padding: 20px; */
+			padding: 0px 15px;
+			height: 41px;
+			text-align: center;
+			line-height: 41px;
+			border-radius: 15px;
+			/* margin: 0px 10px; */
+		}
+
+		nav a:hover {
+			background-color: ;
+			transition-duration: 1s;
+			color: orange;
+		}
+
+		div {
+			width: 300px;
+			height: 300px;
+			background: pink;
+			margin: 30px auto;		/* margin左右填写为auto可以使盒子居中 */
+		
+		}
+		.top {
+			margin-bottom: 100px;
+		}
+
+		.bottom {
+			margin-top: 50px;			/* 外边距合并，垂直的块级盒子 以最大的外边距为准 */
+		}
+
+		.father {
+			background-color: purple;
+			width: 400px;
+			height: 400px;
+			margin-top: 100px;
+			/* border:1px solid purple; */
+			padding: 1px;
+
+			/* 为父元素定义上边框或上内边距可解决外边距塌陷问题 */
+		}
+
+		.son {
+			background-color: skyblue;
+			width: 300px;
+			height: 300px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="#">首页</a>
+		<a href="#">手机新浪网</a>
+		<a href="#">网站导航</a>
+		<a href="#">三个字</a>
+	</nav>
+	<div></div>
+
+	<div class="top"></div>
+	<div class="bottom"></div>
+
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

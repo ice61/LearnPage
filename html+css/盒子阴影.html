@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒子阴影</title>
+	<style>
+		div:first-child {
+			width: 300px;
+			height: 300px;
+			border: 2px solid skyblue;
+			/* box-shadow: 水平位置 垂直位置 模糊距离 阴影尺寸 阴影颜色 内/外阴影 */
+
+			box-shadow:10px 10px 5px 10px orange /* inset */;	/* 如果使用外阴影，直接省略，不可以写outset */
+		}
+
+		div:last-child {
+			margin-top: 30px;
+			width: 300px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			font-size: 30px;
+			color: orange;
+			border: 1px solid skyblue;
+		}
+
+		div:last-child:hover {
+			box-shadow: 0px 5px 30px 10px gray;
+			transition-duration: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div>考试答案</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html5新标签</title>
+</head>
+<body>
+	<header>定义页面的头部，页眉</header>
+	<nav>定义导航栏</nav>
+	<article>定义文章</article>
+	<aside>侧边块</aside>
+	<section>定义区域</section>
+	<footer>定义页面底部</footer>
+
+	<input type="text" value="请输入姓名" list="star" />
+	<datalist id="star">
+		<option>张翼航</option>
+		<option>阿赐</option>
+		<option>无阿赐</option>
+	</datalist>
+
+	<br /><br /><br /><br />
+
+	<fieldset>
+		<legend>用户登录</legend>
+		用户名：<input type="text" ><br>
+		密码：<input type="password">
+	</fieldset><br><br><br>
+
+	<fieldset>
+		<legend>HTML5新增的表单类型</legend>
+		<form action="#" method="post">
+			邮箱：<input type="email" /><br>
+			手机：<input type="tel" placeholder="13605322499" /><br>
+			数字：<input type="number" /><br>
+			URL： <input type="url" /><br>
+			搜索：<input type="search" autofocus="autofocus" /><br> <!-- 加入autofocus属性后页面加载完成后此input会自动获得焦点 -->
+			滑块：<input type="range"><br>
+			时间：<input type="time" name="time"><br>
+			日期：<input type="date" name="date"><br>
+			星期：<input type="week" name="week" required="required"><br><!-- 添加required属性后代表不能为空 -->
+			多文件上传：<input type="file" multiple="multiple" /><br>
+			自动记录完成：<input type="text" autocomplete="off" name="record" /><br>
+			accesskay：<input type="text" accesskey="s" />
+			<!-- 添加accesskey属性后，使用alt+字母可自动获取焦点 -->
+			<input type="submit">
+
+		</form>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字溢出设置</title>
+	<style>
+		div {
+			width: 100px;
+			height: 20px;
+			border: 1px solid #f00;
+			white-space: nowrap;	/* 添加此属性强制文本一行内显示 */
+			text-overflow: ellipsis;	/* 若改为clip不显示省略标记，直接进行简单裁切，必须要搭配overflow */
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div>我的名字是阿赐，我觉得这次应该不难</div>
+</body>
+</html>

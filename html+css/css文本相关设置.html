@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css文本相关设置</title>
+	<style type="text/css">
+		h3 {
+			color: red;
+			font-size: 40px;
+			font-family: "微软雅黑",tahoma,arial,"Hiragino Sans GB";
+		}
+		/* 多个字体之间使用逗号隔开 */
+		h2 {
+			color: orange;
+			font-size: 50px;
+			font-weight: bold;
+			font-style: italic;		/* 字体倾斜 */
+		}
+		/* font综合设置字体样式：
+			选择器 {
+				font: font-style font-weight font-size font-family;
+				必须有字号和字体，否则将无效
+			} */
+		h1 {
+			font: italic bold 60px "微软雅黑";
+			color: blue;
+		}
+
+		.font-color {
+			color: #711fda;
+		}
+
+		.font-size {
+			font-size: 50px;
+		}
+
+		#choose {
+			font-size: 30px;
+			color: green;
+		}
+
+		/* 通配符选择器 平时极少用*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<h3>阿赐：我觉得这次应该不难</h3>
+	<h2>阿赐：我挂了</h2>
+	<h1>阿赐：但我觉得下次能不难</h1>
+	<div class="font-color">我是被类选择器所改变的</div>
+	<div class="font-color font-size">多类名选择器</div>
+	<div id="choose">id选择器</div>
+</body>
+</html> 

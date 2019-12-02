@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器</title>
+	<style>
+		a[title] {
+			color: skyblue;
+		}
+
+		a {
+			color: orange;
+		}
+
+		input[type=text] {
+			color: red;
+		}
+
+		input {
+			color: blue;
+		}
+
+		div[class^=font] {		/* ^=font表示以font开头 */
+			color: orange;
+		}
+
+		div[class$=footer] {	/* $=footer表示以footer结尾 */
+			color: gray;
+		}
+
+		div[class*=tao] {		/* *=tao表示含有tao的 */
+			color: green;		
+		}
+	</style>
+</head>
+<body>
+	<a href="#" title="我是一个百度">百度</a>
+	<a href="#" title="我是一个新浪">新浪</a>
+	<a href="#">网易</a>
+	<a href="#">土豆</a>
+	<br>
+	<br>
+	<br>
+
+	<hr>
+
+	<input type="text" placeholder="请填写"/><br><br>
+	<input type="text" value="请填写"/><br><br>
+	<input type="text" value="请填写"/><br><br>
+
+	<input type="submit" /><br><br>
+	<input type="submit" /><br><br>
+
+	<hr>
+
+	<div class="font24">24</div>
+	<div class="font24">24</div>
+	<div class="font24">24</div>
+	<div class="font24">24</div>
+	<div class="font26">26</div>
+	<div class="pont24">pont24</div>
+	<div class="sub-footer">sub-footer</div>
+	<div class="jd-footer">jd-footer</div>
+	<div class="news-tao-nav">news-tao-nav</div>
+	<div class="news-tao-header">news-tao-header</div>
+	<div class="tao-header">tao-header</div>
+</body>
+</html>
